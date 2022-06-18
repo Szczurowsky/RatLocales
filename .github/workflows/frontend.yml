@@ -1,0 +1,29 @@
+name: FrontEnd
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v2.4.0
+
+    - name: Install dependencies
+      run: npm --prefix frontend/ install
+
+    - name: Build web client
+      run: npm --prefix frontend/ run build
+
+    - name: Test app
+      run: npm --prefix frontend/ run test
