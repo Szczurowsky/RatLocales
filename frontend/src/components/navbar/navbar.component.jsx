@@ -81,7 +81,7 @@ export default function Navbar() {
                     py-2 px-4 inline-flex"
                   >
                     <span className={(loggedIn ? 'hidden' : '')}>
-                      Marcel
+                      User
                     </span>
                     <i
                       className={

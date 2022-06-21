@@ -1,7 +1,8 @@
 import React from 'react';
 import {Routes, Route} from 'react-router-dom';
-import Home from './pages/home/Home';
 import './i18n';
+import Home from './pages/home/Home';
+import Project from './pages/project/Project';
 
 /**
  * App component
@@ -12,7 +13,8 @@ export default function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Home />} title="Home &#9679 RatLocales" />
+        <Route path="/" element={<Home />} />
+        <Route path="/project/:id" element={<Project />} />
       </Routes>
     </div>
   );

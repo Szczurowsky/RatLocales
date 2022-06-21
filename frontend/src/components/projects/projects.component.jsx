@@ -10,7 +10,7 @@ export default function Projects() {
     items.push(
         <>
           <a
-            href="/#"
+            href={'/project/project' + (i+1)}
           >
             <div
               className=
