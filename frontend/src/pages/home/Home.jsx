@@ -1,15 +1,19 @@
 import React from 'react';
 import './home.styles.scss';
+import Navbar from '../../components/navbar/navbar.component';
+import Projects from '../../components/projects/projects.component';
 
-const Home = () => {
+/**
+ * Home page
+ * @return {JSX.Element}
+ * @constructor
+ */
+export default function Home() {
+  document.title = 'Home ● RatLocales';
   return (
     <>
-      <div className="text-8xl">
-        <p>s</p>
-        <h1>Home</h1>
-      </div>
+      <Navbar />
+      <Projects />
     </>
   );
-};
-
-export default Home;
+}
