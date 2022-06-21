@@ -43,12 +43,14 @@ export default function Navbar() {
                 bg-transparent block lg:hidden outline-none focus:outline-none
                 "
               type="button"
+              data-testid="navbar-toggle"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
               <i className="bx bx-menu"></i>
             </button>
           </div>
           <div
+            data-testid="navbar-collapse"
             className={
               'lg:flex flex-grow items-center' +
               (navbarOpen ? ' flex' : ' hidden')
